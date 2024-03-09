@@ -11,7 +11,7 @@ const res = arr.filter((val)=>{
 
 })
 
-console.log(res)
+// console.log(res)
 
 let newArray = [];
 arr.forEach((value)=>{
@@ -20,7 +20,14 @@ arr.forEach((value)=>{
         newArray.push(value)
     }
 })
-console.log(newArray)
+// console.log(newArray)
 newArray.forEach((item)=>{
-    console.log(item);
+    // console.log(item);
 })
+// Method Chaining Technique
+let square = arr.map((item)=>{
+    return item * item
+}).filter((val)=>{
+    return val % 3==0
+})
+console.log(square)
