@@ -42,13 +42,29 @@
 // console.log(input);
 
 // 
-let arr = [2, 4, 6, 8];
-let arr2 = [];
-let sum = 0;
+// let arr = [2, 4, 6, 8];
+// let arr2 = [];
+// let sum = 0;
 
-for (let i = arr.length - 1; i >= 0; i--) {
-  sum += arr[i];
-  arr2.push(sum);
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   sum += arr[i];
+//   arr2.push(sum);
+// }
+
+// console.log(arr2);
+
+// Missing ODD Number
+let arr =[5,7,9,11,15,17];
+console.log(arr);
+let num = 2;
+let i;
+for(i=0;i<arr.length;i++){
+  if(arr[i]+num!=arr[i+1]){
+      break;
+  }
+  else{
+    continue;
+  }
 }
 
-console.log(arr2);
+console.log(`Missing ODD Number is ${arr[i]+num}`)
