@@ -25,18 +25,30 @@
 // compareObject(input1,input2)
 // console.log(input3)
 
-
 // const inputArray = [1,2,-2,11,7,1];
 // inputArray.sort((a,b)=>a-b);
 // console.log(inputArray)
 // // for (let index = 0; index < array.length; index++) {
-    
+
 // // }
 // let len = inputArray.length-2;
 // console.log(`Second Largest Element is ${inputArray[len]}`)
 
-const input = [2,7, 11,4, -2];
-console.log(input)
-input.push(input.shift());
-input.push(input.shift());
-console.log(input);
+// Array Rotation
+// const input = [2,7, 11,4, -2];
+// console.log(input)
+// input.push(input.shift());
+// input.push(input.shift());
+// console.log(input);
+
+// 
+let arr = [2, 4, 6, 8];
+let arr2 = [];
+let sum = 0;
+
+for (let i = arr.length - 1; i >= 0; i--) {
+  sum += arr[i];
+  arr2.push(sum);
+}
+
+console.log(arr2);
