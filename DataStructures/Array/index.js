@@ -85,3 +85,87 @@
 // }else{
 //     console.log("No duplicates found")
 // }
+// 7. Two Sum Problem
+
+// let arr = [3,14,6,18,10]
+// let left = 0;
+// let right = arr.length - 1;
+// let res = []
+// let target = 16
+// arr.sort((a,b)=> a-b)
+// while(left < right){
+//     let sum = arr[left] + arr[right]
+//     console.log(arr[left],arr[right])
+//     if(sum === target){
+//         res.push(arr[left])
+//         res.push(arr[right])
+//         break;
+//     }else if(sum < target){
+//         left ++;
+//     }else{
+//         right --;
+//     }
+// }
+// let target = 16;
+
+// for(let i =0;i<arr.length;i++){
+//     for(let j = i+1;j<arr.length;j++){
+//         // console.log(arr[i]+arr[j])
+//         if(arr[i]+arr[j] === target){
+//             res.push(arr[i])
+//             res.push(arr[j])
+//         }
+//     }
+// }
+
+// console.log(res)
+// 8 Merge two Sorted Arrays
+// let arr1 = [2,4,6,8]
+// let arr2 = [10,12,14,16]
+// let res = []
+
+// let n = arr1.length + arr2.length;
+// console.log(n)
+// let i = 0;
+// while (i < n) {
+//     if(i < 4){
+//         console.log(i)
+//         res.push(arr1[i])
+//     }else{
+//         console.log(i)
+//         res.push(arr2[i-arr2.length])
+//     }
+//     i++;
+// }
+// for(i = 0;i< arr1.length;i++){
+//     res.push(arr1[i])
+// }
+// console.log(i)
+// for(;i<n;i++){
+//     res.push(arr2[i])
+// }
+
+// console.log(res)
+// 9. Merge Two sorted Arrays without Extra Space
+// let arr1 = [1,5,9,10,15,20]
+// let arr2 = [2,3,8,13]
+// let m = arr1.length
+// let p = arr2.length
+
+// for(let i =0;i<arr2.length;i++){
+//     arr1.push(arr2[i])
+// }
+
+// console.log(arr1)
+
+// 10 Maximum Subarray Sum
+let arr = [2, 3, -8, 7, -1, 2, 3]
+let sum = arr[0];
+for(let i = 0; i< arr.length;i++){
+    let currSum = 0;
+    for(let j = i; j< arr.length; j++){
+        currSum = currSum + arr[j];
+        sum = Math.max(currSum,sum)
+    }
+}
+console.log(sum)
