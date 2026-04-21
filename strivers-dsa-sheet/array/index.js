@@ -82,18 +82,50 @@
 // moveZeros(nums)
 
 // Left rotate array by k steps
-let nums = [1, 2, 3, 4, 5, 6, 7];
-let k = 2;
+// let nums = [1, 2, 3, 4, 5, 6, 7];
+// let k = 2;
 
-function rotateArray(nums,k){
-    for(let i = 0;i<k;i++){
-        let first = nums[nums.length-1]
-        for(let j = nums.length-1;j>=0;j--){
-            nums[j] = nums[j-1]
+// function rotateArray(nums,k){
+//     for(let i = 0;i<k;i++){
+//         let first = nums[nums.length-1]
+//         for(let j = nums.length-1;j>=0;j--){
+//             nums[j] = nums[j-1]
+//         }
+//         nums[0] = first
+//     }
+//     console.log(nums)
+// }
+
+// rotateArray(nums,2)
+// Find the Leader in the Array
+let arr = [32,10, 22, 12, 3, 0, 6] 
+
+// First find the smalles Number actaully Index
+
+function smallestNumberIndex(arr){
+    let ele = arr[0]
+    let index;
+    for(let i =1;i<arr.length;i++){
+        if(arr[i] < ele){
+            ele = arr[i]
+            index = i;
         }
-        nums[0] = first
     }
-    console.log(nums)
+    // console.log(ele,index)
+    return index;
 }
 
-rotateArray(nums,2)
+let i = 0;
+let j = smallestNumberIndex(arr);
+let newArr = []
+for(let k = j;k>0;k--){
+    console.log(arr[k])
+    if(arr[k-1] < arr[k]){
+        break;
+    }
+    if(arr[k-1]> arr[k]){
+        newArr.push(arr[k-1])
+    }
+}
+
+console.log(newArr)
